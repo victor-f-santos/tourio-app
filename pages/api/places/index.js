@@ -9,4 +9,10 @@ export default async function handler(request, response) {
     console.log(places);
     return response.status(200).json(places);
   }
+  if (request.method === "POST") {
+    await Place.create(request.body);
+    return response
+      .status(200)
+      .json({ success: true, status: "Place created" });
+  }
 }
