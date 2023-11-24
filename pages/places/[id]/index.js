@@ -68,7 +68,7 @@ export default function DetailsPage() {
         />
       </ImageContainer>
       <h2>
-        {place.name}, {place.location}
+        {place.name} - {place.location}
       </h2>
       <Link href={place.mapURL} passHref legacyBehavior>
         <StyledLocationLink>Location on Google Maps</StyledLocationLink>
